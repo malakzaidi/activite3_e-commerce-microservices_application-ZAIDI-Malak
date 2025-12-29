@@ -1,0 +1,45 @@
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="nav-container">
+    <h1 class="nav-title">{{ title }}</h1>
+
+    <ul class="nav-menu">
+      <li *ngFor="let item of menuItems">
+        <a
+          [routerLink]="item.path"
+          routerLinkActive="active"
+        >
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<main class="main-content">
+  <router-outlet></router-outlet>
+
+  <div class="content">
+    <div class="left-side">
+      <h1>Hello, {{ title }}</h1>
+      <p>Congratulations! Your app is running 🎉</p>
+    </div>
+
+    <div class="divider" role="separator"></div>
+
+    <div class="right-side">
+      <div class="pill-group">
+        <a
+          class="pill"
+          *ngFor="let item of links"
+          [href]="item.link"
+          target="_blank"
+          rel="noopener"
+        >
+          {{ item.title }}
+        </a>
+      </div>
+    </div>
+  </div>
+</main>

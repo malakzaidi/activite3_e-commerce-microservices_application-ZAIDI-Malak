@@ -1,0 +1,72 @@
+<div class="container">
+  <h2>Gestion de la Facturation</h2>
+
+  <div *ngIf="error" class="error-message">
+    {{ error }}
+  </div>
+
+  <div class="form-section">
+    <h3>Créer une nouvelle facture</h3>
+    <div class="form-group">
+      <input 
+        type="number" 
+        placeholder="ID du client"
+        [(ngModel)]="newBill.customerId"
+        class="form-input"
+      />
+    </div>
+    <div class="form-group">
+      <input 
+        type="date"
+        [(ngModel)]="newBill.billDate"
+        class="form-input"
+      />
+    </div>
+    <div class="form-group">
+      <input 
+        type="number" 
+        placeholder="Montant total"
+        [(ngModel)]="newBill.totalAmount"
+        class="form-input"
+      />
+    </div>
+    <button (click)="addBill()" class="btn btn-primary">
+      Créer une facture
+    </button>
+  </div>
+
+  <div class="list-section" *ngIf="!isLoading">
+    <h3>Liste des factures</h3>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>ID Client</th>
+          <th>Date</th>
+          <th>Montant Total</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let bill of bills">
+          <td>{{ bill.id }}</td>
+          <td>{{ bill.customerId }}</td>
+          <td>{{ bill.billDate }}</td>
+          <td>{{ bill.totalAmount | currency }}</td>
+          <td>
+            <button (click)="deleteBill(bill.id)" class="btn btn-danger btn-small">
+              Supprimer
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p *ngIf="bills.length === 0" class="empty-message">
+      Aucune facture trouvée
+    </p>
+  </div>
+
+  <div *ngIf="isLoading" class="loading">
+    Chargement...
+  </div>
+</div>

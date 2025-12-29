@@ -1,0 +1,174 @@
+/* Global Styles */
+
+:root {
+  --primary-color: #667eea;
+  --secondary-color: #764ba2;
+  --danger-color: #f56565;
+  --success-color: #48bb78;
+  --warning-color: #f6ad55;
+  --info-color: #4299e1;
+  
+  --text-dark: #333;
+  --text-light: #666;
+  --bg-light: #f5f7fa;
+  --border-color: #ddd;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Text Selection */
+::selection {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+::-moz-selection {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1.1rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+/* Links */
+a {
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* Forms */
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+}
+
+/* Tables */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+.p-1 { padding: 0.5rem; }
+.p-2 { padding: 1rem; }
+.p-3 { padding: 1.5rem; }
+.p-4 { padding: 2rem; }
+
+/* Responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.35rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+}

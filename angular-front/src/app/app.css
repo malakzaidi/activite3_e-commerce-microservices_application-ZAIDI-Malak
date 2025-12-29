@@ -1,0 +1,73 @@
+:host {
+  --bright-blue: #3b82f6;
+  --electric-violet: #8b5cf6;
+  --hot-red: #ef4444;
+  --gray-900: #111827;
+  --gray-700: #374151;
+  --gray-400: #9ca3af;
+
+  font-family: Inter, Arial, sans-serif;
+  box-sizing: border-box;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #111827;
+  padding: 1rem 2rem;
+}
+
+.nav-title {
+  color: white;
+  margin: 0;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 1rem;
+  list-style: none;
+}
+
+.nav-menu a {
+  color: #9ca3af;
+  text-decoration: none;
+}
+
+.nav-menu a.active {
+  color: white;
+}
+
+/* MAIN */
+.main-content {
+  padding: 2rem;
+}
+
+.content {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.divider {
+  width: 1px;
+  height: 150px;
+  background: linear-gradient(to bottom, red, purple);
+}
+
+/* PILLS */
+.pill-group {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.pill {
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  color: var(--bright-blue);
+  background: rgba(59, 130, 246, 0.1);
+}
+
+.pill:hover {
+  background: rgba(59, 130, 246, 0.2);
+}
